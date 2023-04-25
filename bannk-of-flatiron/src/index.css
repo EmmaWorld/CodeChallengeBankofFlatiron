@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+input {
+  width: 25% !important;
+  margin-right: 0.25em !important;
+  margin-left: 0.25em !important;
+  background-color: rgb(207, 201, 201);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color:rgb(242, 212, 174);
+}
+
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
+
+h2 {
+  background-color: rgb(211, 159, 90);
+  border-radius: 10%;
+}
+
+.ui button {
+  background-color: tan;
+  border: bold;
+  border-radius: 30%;
+  border-width: thick;
+}
+
+.ui.table {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  margin-top: 20px;
+}
+
+
+
+.moving-text:hover {
+  animation-play-state: paused;
+}
+
+/* The animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* media query to enable animation for only those who want it */
+@media (prefers-reduced-motion: no-preference) {
+  .moving-text {
+    animation: marquee 15s linear infinite;
+  }
+}
